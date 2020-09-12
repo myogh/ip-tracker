@@ -1,0 +1,181 @@
+$body-font: 'Rubik', sans-serif;
+$body-font-size: 18px;
+$lg-break: 1040px;
+$md-break: 882px;
+$sm-break: 688px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+}
+
+.top-container {
+    width: 100%;
+    height: 15em;
+    text-align: center;
+    padding-top: 2em;
+    background-image: url(../images/pattern-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    @media screen and (max-width: $sm-break) {
+        height: 18em;
+    }
+    h1 {
+        @media screen and (max-width: $sm-break) {
+            font-size: 1.5rem;
+            
+        }
+    }
+    .input-box {
+        display: flex;    
+        width: 35em;
+        margin: 2em auto;
+        @media screen and (max-width: $sm-break) {
+            width: 70vw;
+            max-width: 22em;
+        }
+        input {
+            height: 50px;
+            width: 89%;
+            font-size: $body-font-size;
+            margin: 0;
+            border: none;
+            padding-left: 1em;
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+            outline: transparent;
+            @media screen and (max-width: $sm-break) {
+                font-size: 0.88rem;
+            }
+        }
+        button {
+            height: 50px;
+            width: 10%;
+            margin: 0;
+            background-color: rgb(39, 39, 39);
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-top-right-radius: 0.9em;
+            border-bottom-right-radius: 0.9em;
+            outline: transparent;
+            cursor: pointer;
+            img {
+                transform: translateX(0px);
+                transition: transform 0.3s linear;
+            }
+            &:hover{
+                background-color: rgb(3, 3, 3);
+                img{
+                    transform: translateX(4px);
+                }
+            }
+            @media screen and (max-width: $sm-break) {
+                width: 17%;
+            }
+        }
+    }
+}
+
+
+.result-container{
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    position: absolute;
+    top: 12em;
+    left: 0;
+    right: 0;
+    width: 60em;
+    padding: 1.7em 1em 1.7em 1em;
+    margin: 0 auto;
+    @media screen and (max-width: $lg-break) {
+        width: 50em;
+    }
+    @media screen and (max-width: $md-break) {
+        width: 40em;
+    }
+    @media screen and (max-width: $sm-break) {
+        flex-direction: column;
+        width: 79vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .result {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: $sm-break) {
+            align-items: center;
+            height: 4em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+        h3 {
+            margin-bottom: 10px;
+            color: rgb(187, 187, 187);
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 0.8rem;
+            @media screen and (max-width: $md-break) {
+                font-size: 0.6rem;
+            }
+            @media screen and (max-width: $sm-break) {
+                font-size: 0.7rem;
+                font-weight: 500;
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            @media screen and (max-width: $md-break) {
+                font-size: 1.2rem;
+            }
+            @media screen and (max-width: $sm-break) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .ip-address, .timezone {
+        border-right: 1px solid rgb(207, 207, 207);
+        padding-right: 30px;
+        @media screen and (max-width: $sm-break) {
+            width: 50%;
+            padding: 0;
+            border: transparent;
+        }
+    }
+
+    .location{
+        width: 23%;
+        border-right: 1px solid rgb(207, 207, 207);
+        @media screen and (max-width: $sm-break) {
+            width: 79%;
+            padding: 0;
+            border: transparent;
+        }
+    }
+    .isp {
+        width: 20%;
+        @media screen and (max-width: $sm-break) {
+            width: 70%;
+            padding: 0;
+            border: transparent;
+        }
+    }
+}
+
+.map{
+    height: 300px;
+    background-color: gray;
+    border: 1px solid red;
+    z-index: -1;
+}
