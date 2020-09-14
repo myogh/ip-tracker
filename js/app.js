@@ -44,7 +44,7 @@ $(document).ready(function () {
         }else if(domainPattern.test(a)){
             url = `https://geo.ipify.org/api/v1?apiKey=at_lBAirkQljWY3y5opF9of4Sje1Pmh3&domain=${a}` 
         }else{
-            url = ''
+            url = 'https://geo.ipify.org/api/v1?apiKey=at_lBAirkQljWY3y5opF9of4Sje1Pmh3'
             alert('Please enter a valid IP or domain')
         }
 
