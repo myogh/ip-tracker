@@ -58,6 +58,12 @@ body {
   border-top-left-radius: 0.5em;
   border-bottom-left-radius: 0.5em;
   outline: transparent;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 @media screen and (max-width: 688px) {
@@ -83,10 +89,10 @@ body {
 .top-container .input-box button img {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .top-container .input-box button:hover {
@@ -122,6 +128,7 @@ body {
   width: 60em;
   padding: 1.7em 1em 1.7em 1em;
   margin: 0 auto;
+  z-index: 999;
 }
 
 @media screen and (max-width: 1040px) {
@@ -143,11 +150,13 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 79vw;
+    height: 260px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 0.8em 1em 0.8em 1em;
   }
 }
 
@@ -166,14 +175,13 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 4em;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
+    height: 2em;
+    margin-bottom: 1.3em;
   }
 }
 
 .result-container .result h3 {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   color: #bbbbbb;
   letter-spacing: 2px;
   font-weight: 400;
@@ -188,13 +196,13 @@ body {
 
 @media screen and (max-width: 688px) {
   .result-container .result h3 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 500;
   }
 }
 
 .result-container .result p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
 
@@ -206,7 +214,7 @@ body {
 
 @media screen and (max-width: 688px) {
   .result-container .result p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
@@ -244,14 +252,18 @@ body {
   .result-container .isp {
     width: 70%;
     padding: 0;
+    text-align: center;
     border: transparent;
   }
 }
 
-.map {
-  height: 300px;
+#map {
+  height: 76vh;
   background-color: gray;
-  border: 1px solid red;
-  z-index: -1;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 2px 9px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 2px 9px -2px rgba(0, 0, 0, 0.75);
 }
 /*# sourceMappingURL=style.css.map */
