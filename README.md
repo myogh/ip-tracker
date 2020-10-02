@@ -9,8 +9,8 @@
 - Check out the demo
 
 ## Utilized Tools 🛠
-⚡ IP Geolocation - [IPify](https://www.ipify.org/)<br>
-⚡ Mapping API - [LeafletJS](https://leafletjs.com/)<br>
-⚡ [jQuery](https://jquery.com/)<br>
-⚡ [Sass](https://sass-lang.com/)
+📌 IP Geolocation - [IPify](https://www.ipify.org/)<br>
+📌 Mapping API - [LeafletJS](https://leafletjs.com/)<br>
+📌 [jQuery](https://jquery.com/)<br>
+📌 [Sass](https://sass-lang.com/)
 
